@@ -195,6 +195,7 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 320px) {
 .team-list{
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     gap: 72px;
 
@@ -308,13 +309,19 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 320px) {
 .page-footer{
     padding: 98px 0;
 }
+
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 72px;
+}
+
 .container-logofooter {
     text-align: center;
 }
 
-.container-logo {
-    margin-right: 24px;
-}
 .logofooter{
     display:inline-block;
     font-size: 18px;
@@ -336,7 +343,6 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 320px) {
     letter-spacing: 0.02em;
     color:  #F4F4FD;
     width: 288px;
-    margin-bottom: 72px;
 }
 .footer-text {
     font-size: 16px;
@@ -352,7 +358,6 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 320px) {
     display: flex;
     justify-content: center;
     gap: 16px;
-    margin-bottom: 72px;
 }
 .footer-social-link:hover,
 .footer-social-link:focus {
@@ -376,8 +381,8 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 320px) {
     border: 1px solid #FFF;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     background-color: transparent;
-    margin-bottom: 16px;
 }
+
 .footer-form-email::placeholder {
     color: #ffffff;
 }
@@ -421,6 +426,10 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 320px) {
     
 .mobile-menu-container {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     padding: 72px 24px 40px 16px;
     width: 100%;
     height: 100%;
@@ -470,7 +479,6 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 320px) {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    margin-bottom: 168px;
 }
 
 .mobile-menu.is-open {
@@ -478,13 +486,18 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 320px) {
     visibility: visible;
     pointer-events: auto;
 }
-
+.mobile-menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
 .mobile-contact {
     font-size: 20px;
+    font-style: normal;
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    margin-bottom: 48px;
+    color:  #434455;
 }
 
 .mobile-contact-list {
@@ -806,7 +819,11 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 320px) {
 
     .container {
         max-width: 768px;
-      }
+    }
+    .page-header-container {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 
     .mobile-open-btn {
         display: none;
@@ -839,8 +856,10 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 320px) {
         display: flex;
         font-size: 12px;
         font-weight: 400;
+        font-style: normal;
         line-height: 1.17;
         letter-spacing: 0.04em;
+        color: #434455;
     }
 
     .contact-list { 
@@ -923,10 +942,12 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 320px) {
     }
    
     .container-footer {
-        display: flex;
+        flex-direction: row;
         align-items: baseline;
+        justify-content: left;
         flex-wrap: wrap;
         max-width: 530px;
+        column-gap: 24px;
     }
 
     .page-footer-text{
@@ -1023,6 +1044,7 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 320px) {
         width: calc((100% - 3*24px) / 4);
     }
     .benefits-list-title {
+        text-align: left;
         font-size: 20px;
         font-weight: 500;
         line-height: 1.2;
@@ -1046,6 +1068,12 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 320px) {
     .foter-social-list {
         display: flex;
         gap: 16px;
+    }
+
+    .container-footer {
+        flex-wrap: nowrap;
+        gap: 0;
+    
     }
 
   }
